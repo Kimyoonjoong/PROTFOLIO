@@ -124,17 +124,17 @@ from, to {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     padding: 0 6.4rem;
   }
   .about-left,
   .about-right{
-    width: 50%;
+    /* width: 50%; */
     padding-top: 6rem;
   }
   .about-left h2{
-    position: absolute;
-    font-size: 5rem;
+    /* position: absolute; */
+    font-size: 4rem;
     text-align: left;
     top: 10%;
     padding-top: 0;
@@ -294,17 +294,36 @@ from, to {
   }
 
 
-/* PC : 윈도우 사이즈 1024px 이상인 경우 적용 */
-@media screen and (min-width:1024px) {
 
+@media screen and (max-width:1280px) {
+  .about-inner{padding: 0 2rem;}
+  .about-left h2{ font-size:3rem;}
+  .abinfo-wrapper{gap:2rem;}
+  .abinfo-h li,.abinfo-p li, .info-h li, .info-p li,
+   .info-bt h4, .info-bt p{font-size:1.6rem}
+  .info-wrapper{gap: 4rem;}
+  .pf-left, .pf-right{padding-top: 0;}
 }
 
-/* 태블릿 : 윈도우 사이즈 768px ~ 1023px 사이인 경우 적용 */
-@media screen and (min-width:768px) and (max-width: 1023px){
 
+@media screen and (max-width:1100px) {
+  .about-inner{
+    flex-direction:column;
+  }
+  .about-left h2{ font-size:5rem; border: none;}
+  .pf-inner{width: 100%; gap: 4rem; flex-direction: column;}
+  .info-tittle{left: 36%;}
+  .info-tittle h3{font-size: 3rem;}
+  .pf-right{gap: 1rem; margin-bottom: 0;}
 }
+.btfood, .dunkin, .paiks{ border: none;}
 
-/* 모바일 : 윈도우 사이즈 0px ~ 767px 사이인 경우 적용 */
+
 @media screen and (max-width:767px){
 
+  .about-left h2{ font-size:3rem;}
+  .abinfo-h li,.abinfo-p li, .info-h li, .info-p li,
+   .info-bt h4, .info-bt p{font-size:1.4rem}
+   .info-tittle{left: 50%; top: 2rem; display: inline; text-align: center;}
+   .pf-inner{padding: 0 4rem; gap: 0;}
 }
